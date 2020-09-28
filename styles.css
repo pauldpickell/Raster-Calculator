@@ -1,0 +1,80 @@
+h1{
+	color: red;
+	text-align: center;
+}
+
+h2, h3, h4{
+	text-align: center;
+}
+
+a, p {
+    text-align:center;
+    display:block;
+}
+
+.button-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
+.error {
+	color: red;
+}
+
+.grid-container-kernel {
+  display: grid;
+  grid-template-columns: repeat(3, 2em);
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.grid-item-kernel {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 1em;
+  padding: 5px;
+  text-align: center;
+}
+
+.grid-container-raster-input {
+  display: grid;
+  grid-template-columns: repeat(7, 2em);
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.grid-item-raster-input {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 1em;
+  padding: 5px;
+  text-align: center;
+}
+
+.grid-container-raster-output {
+  display: grid;
+  grid-template-columns: repeat(7, 2em);
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.grid-item-raster-output {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 1em;
+  padding: 5px;
+  text-align: center;
+}

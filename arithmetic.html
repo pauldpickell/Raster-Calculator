@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="styles.css">
+<body>
+
+<h1>Arithmetic</h1>
+
+<h3>Input value</h3>
+<p>
+	<input type="text" id="inputval" value="5"><p id="error"></p>
+</p>
+<p>
+	<button onclick="addto()">Add to</button>
+	<button onclick="subtractfrom()">Subtract from</button>
+	<button onclick="divideby()">Divide by</button>
+	<button onclick="multiplyby()">Mulitply by</button>
+</p>
+	
+<h3>Raster Input</h3>
+<div class="grid-container-raster-input">
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+</div>
+
+<h3>Raster Output</h3>
+<div class="grid-container-raster-output">
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+</div>
+
+<br>
+<a href="index.html">Back</a>
+
+<script>
+Array.from(document.getElementsByClassName("grid-item-raster-input")).forEach(
+	function(element, index, array) { 
+		// randomly assign value to cell
+		element.innerHTML = Math.floor(Math.random()*256);
+	}
+)
+
+var output = Array.from(document.getElementsByClassName("grid-item-raster-output"));
+//console.log(constant.value);
+
+// colorize the random input raster
+Array.from(document.getElementsByClassName("grid-item-raster-input")).forEach(
+	function(element, index, array) { 		
+		output[index].innerHTML = Math.round(Number(element.innerHTML)+Number(inputval));
+		// color background of input cell based value
+		var thergb = "rgb(" + element.innerHTML + "," + element.innerHTML + "," + element.innerHTML + ")"; 
+		element.style.background=thergb;
+		// conditionally convert some text to white on dark backgrounds
+		if (Number(element.innerHTML)<128){
+			element.style.color="#FFFFFF";
+		}
+	}
+)
+
+// addto
+function addto() {
+	var inputval = document.getElementById("inputval").value;
+	Array.from(document.getElementsByClassName("grid-item-raster-input")).forEach(
+		function(element, index, array) { 		
+			output[index].innerHTML = Math.round(Number(element.innerHTML)+Number(inputval));
+			// color background of output cell based value
+			var thergb = "rgb(" + output[index].innerHTML + "," + output[index].innerHTML + "," + output[index].innerHTML + ")"; 
+			output[index].style.background=thergb;
+			// conditionally convert some text to white on dark backgrounds
+			if (Number(output[index].innerHTML)<128){
+				output[index].style.color="#FFFFFF";
+			} else {
+				output[index].style.color="#000000";
+			}
+		}
+	)
+}
+
+// subtract from
+function subtractfrom() {
+	var inputval = document.getElementById("inputval").value;
+	Array.from(document.getElementsByClassName("grid-item-raster-input")).forEach(
+		function(element, index, array) { 		
+			output[index].innerHTML = Math.round(Number(element.innerHTML)-Number(inputval))
+			// color background of output cell based value
+			var thergb = "rgb(" + output[index].innerHTML + "," + output[index].innerHTML + "," + output[index].innerHTML + ")"; 
+			output[index].style.background=thergb;
+			// conditionally convert some text to white on dark backgrounds
+			if (Number(output[index].innerHTML)<128){
+				output[index].style.color="#FFFFFF";
+			} else {
+				output[index].style.color="#000000";
+			}
+		}
+	)
+}
+
+// divide by
+function divideby() {
+	var inputval = document.getElementById("inputval").value;
+	if (inputval != 0) {
+		Array.from(document.getElementsByClassName("grid-item-raster-input")).forEach(
+			function(element, index, array) { 		
+				output[index].innerHTML = Math.round(Number(element.innerHTML)/Number(inputval));
+				// color background of output cell based value
+				var thergb = "rgb(" + output[index].innerHTML + "," + output[index].innerHTML + "," + output[index].innerHTML + ")"; 
+				output[index].style.background=thergb;
+				// conditionally convert some text to white on dark backgrounds
+				if (Number(output[index].innerHTML)<128){
+					output[index].style.color="#FFFFFF";
+				} else {
+					output[index].style.color="#000000";
+				}
+			}
+		)
+	} else {
+		document.getElementById("error").innerHTML = "Error: Dividing by zero is undefined.";
+	}
+}
+
+// multiply by
+function multiplyby() {
+	var inputval = document.getElementById("inputval").value;
+	Array.from(document.getElementsByClassName("grid-item-raster-input")).forEach(
+		function(element, index, array) { 		
+			output[index].innerHTML = Math.round(Number(element.innerHTML)*Number(inputval));
+			// color background of output cell based value
+			var thergb = "rgb(" + output[index].innerHTML + "," + output[index].innerHTML + "," + output[index].innerHTML + ")"; 
+			output[index].style.background=thergb;
+			// conditionally convert some text to white on dark backgrounds
+			if (Number(output[index].innerHTML)<128){
+				output[index].style.color="#FFFFFF";
+			} else {
+				output[index].style.color="#000000";
+			}
+		}
+	)
+}
+
+</script>
+
+</body>
+</html>

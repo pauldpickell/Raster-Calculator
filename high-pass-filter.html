@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="styles.css">
+<body>
+
+<h1>High Pass Image Filter</h1>
+
+<h3>Kernel</h3>
+<div class="grid-container-kernel">
+	<div class="grid-item-kernel">-0.7</div>
+	<div class="grid-item-kernel">-1</div>
+	<div class="grid-item-kernel">-0.7</div>
+	<div class="grid-item-kernel">-1</div>
+	<div class="grid-item-kernel">6.8</div>
+	<div class="grid-item-kernel">-1</div>
+	<div class="grid-item-kernel">-0.7</div>
+	<div class="grid-item-kernel">-1</div>
+	<div class="grid-item-kernel">-0.7</div>
+</div>
+
+<div class="button-center"><button onClick="randomize();">Random</button></div>
+<div class="button-center"><button onClick="structurize();">Structured</button></div>
+
+<h3>Raster Input</h3>
+<div class="grid-container-raster-input">
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+</div>
+
+<h3>Raster Output</h3>
+<div class="grid-container-raster-output">
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+</div>
+
+<br>
+<div class="button-center"><a href="index.html" class="button">Back</a></div>
+
+<script>
+
+var kernel = Array.from(document.getElementsByClassName("grid-item-kernel"));
+var output = Array.from(document.getElementsByClassName("grid-item-raster-output"));
+//console.log(kernel[5].innerHTML);
+
+// structurize
+function structurize(){
+	Array.from(document.getElementsByClassName("grid-item-raster-input")).forEach(
+		function(element, index, array) { 		
+			if (index == 7 || index == 9|| index == 10|| index == 11|| index == 12|| index == 13) {
+				element.innerHTML = Number(128);
+			} else if (index == 1|| index == 8|| index == 15|| index == 22|| index == 29|| index == 36|| index == 39|| index == 40|| index == 43|| index == 46|| index == 47) {
+				element.innerHTML = Number(0);
+			} else {
+				element.innerHTML = Number(255);
+			}
+		}
+	)
+	
+	Array.from(document.getElementsByClassName("grid-item-raster-input")).forEach(
+		function(element, index, array) { 
+			// align the kernel with the input raster elements
+			// first let's identify the corner cases
+			if (index == 0) {
+				// top left corner
+				output[index].innerHTML = Math.round(Number(array[0].innerHTML)*Number(kernel[4].innerHTML) + Number(array[1].innerHTML)*Number(kernel[5].innerHTML) + Number(array[7].innerHTML)*Number(kernel[7].innerHTML) + Number(array[8].innerHTML)*Number(kernel[8].innerHTML))
+			} else if (index == 6) {
+				// top right corner
+				output[index].innerHTML = Math.round(Number(array[5].innerHTML)*Number(kernel[3].innerHTML) + Number(array[6].innerHTML)*Number(kernel[4].innerHTML) + Number(array[12].innerHTML)*Number(kernel[6].innerHTML) + Number(array[13].innerHTML)*Number(kernel[7].innerHTML))
+			} else if (index == 42) {
+				// bottom left corner
+				output[index].innerHTML = Math.round(Number(array[35].innerHTML)*Number(kernel[1].innerHTML) + Number(array[36].innerHTML*Number(kernel[2].innerHTML)) + Number(array[42].innerHTML)*Number(kernel[4].innerHTML) + Number(array[43].innerHTML)*Number(kernel[5].innerHTML))
+			} else if (index == 48) {
+				// bottom right corner
+				output[index].innerHTML = Math.round(Number(array[40].innerHTML)*Number(kernel[0].innerHTML) + Number(array[41].innerHTML)*Number(kernel[1].innerHTML) + Number(array[47].innerHTML)*Number(kernel[3].innerHTML) + Number(array[48].innerHTML)*Number(kernel[4].innerHTML))
+			} else if (index > 0 && index < 6) {
+				// top edge
+				output[index].innerHTML = Math.round(Number(array[index-1].innerHTML)*Number(kernel[3].innerHTML) + Number(array[index].innerHTML)*Number(kernel[4].innerHTML) + Number(array[index+1].innerHTML)*Number(kernel[5].innerHTML) + Number(array[index+6].innerHTML)*Number(kernel[6].innerHTML) + Number(array[index+7].innerHTML)*Number(kernel[7].innerHTML) + Number(array[index+8].innerHTML)*Number(kernel[8].innerHTML))
+			} else if (index > 42 && index < 48) {
+				// bottom edge
+				output[index].innerHTML = Math.round(Number(array[index-8].innerHTML)*Number(kernel[0].innerHTML) + Number(array[index-7].innerHTML)*Number(kernel[1].innerHTML) + Number(array[index-6].innerHTML)*Number(kernel[2].innerHTML) + Number(array[index-1].innerHTML)*Number(kernel[3].innerHTML) + Number(array[index].innerHTML)*Number(kernel[4].innerHTML) + Number(array[index+1].innerHTML)*Number(kernel[5].innerHTML))
+			} else if (index == 7 || index == 14 || index == 21 || index == 28 || index == 35) {
+				// left edge
+				output[index].innerHTML = Math.round(Number(array[index-7].innerHTML)*Number(kernel[1].innerHTML) + Number(array[index-6].innerHTML)*Number(kernel[2].innerHTML) + Number(array[index].innerHTML)*Number(kernel[4].innerHTML) + Number(array[index+1].innerHTML)*Number(kernel[5].innerHTML) + Number(array[index+7].innerHTML)*Number(kernel[7].innerHTML) + Number(array[index+8].innerHTML)*Number(kernel[8].innerHTML))
+			} else if (index == 13 || index == 20 || index == 27 || index == 34 || index == 41) {
+				// right edge
+				output[index].innerHTML = Math.round(Number(array[index-8].innerHTML)*Number(kernel[0].innerHTML) + Number(array[index-7].innerHTML)*Number(kernel[1].innerHTML) + Number(array[index-1].innerHTML)*Number(kernel[3].innerHTML) + Number(array[index].innerHTML)*Number(kernel[4].innerHTML) + Number(array[index+6].innerHTML)*Number(kernel[6].innerHTML) + Number(array[index+7].innerHTML)*Number(kernel[7].innerHTML))
+			} else {
+				// any other value
+				output[index].innerHTML = Math.round(Number(array[index-8].innerHTML)*Number(kernel[0].innerHTML) + Number(array[index-7].innerHTML)*Number(kernel[1].innerHTML) + Number(array[index-6].innerHTML)*Number(kernel[2].innerHTML) + Number(array[index-1].innerHTML)*Number(kernel[3].innerHTML) + Number(array[index].innerHTML)*Number(kernel[4].innerHTML) + Number(array[index+1].innerHTML)*Number(kernel[5].innerHTML) + Number(array[index+6].innerHTML)*Number(kernel[6].innerHTML) + Number(array[index+7].innerHTML)*Number(kernel[7].innerHTML) + Number(array[index+8].innerHTML)*Number(kernel[8].innerHTML))
+			}
+			
+			// color background of input cell based value
+			var thergb = "rgb(" + element.innerHTML + "," + element.innerHTML + "," + element.innerHTML + ")"; 
+			element.style.background=thergb;
+			// conditionally convert some text to white on dark backgrounds
+			if (Number(element.innerHTML)<128){
+				element.style.color="#FFFFFF";
+			} else {
+				element.style.color="#000000";
+			}
+			
+			// color background of output cell based value
+			var thergb = "rgb(" + output[index].innerHTML + "," + output[index].innerHTML + "," + output[index].innerHTML + ")"; 
+			output[index].style.background=thergb;
+			// conditionally convert some text to white on dark backgrounds
+			if (Number(output[index].innerHTML)<128){
+				output[index].style.color="#FFFFFF";
+			} else {
+				output[index].style.color="#000000";
+			}
+		}
+	)
+}
+
+// randomize
+function randomize(){
+	Array.from(document.getElementsByClassName("grid-item-raster-input")).forEach(
+		function(element, index, array) { 
+			// randomly assign value to cell
+			element.innerHTML = Math.floor(Math.random()*256);
+			// align the kernel with the input raster elements
+			// first let's identify the corner cases
+			if (index == 0) {
+				// top left corner
+				output[index].innerHTML = Math.round(Number(array[0].innerHTML)*Number(kernel[4].innerHTML) + Number(array[1].innerHTML)*Number(kernel[5].innerHTML) + Number(array[7].innerHTML)*Number(kernel[7].innerHTML) + Number(array[8].innerHTML)*Number(kernel[8].innerHTML))
+			} else if (index == 6) {
+				// top right corner
+				output[index].innerHTML = Math.round(Number(array[5].innerHTML)*Number(kernel[3].innerHTML) + Number(array[6].innerHTML)*Number(kernel[4].innerHTML) + Number(array[12].innerHTML)*Number(kernel[6].innerHTML) + Number(array[13].innerHTML)*Number(kernel[7].innerHTML))
+			} else if (index == 42) {
+				// bottom left corner
+				output[index].innerHTML = Math.round(Number(array[35].innerHTML)*Number(kernel[1].innerHTML) + Number(array[36].innerHTML*Number(kernel[2].innerHTML)) + Number(array[42].innerHTML)*Number(kernel[4].innerHTML) + Number(array[43].innerHTML)*Number(kernel[5].innerHTML))
+			} else if (index == 48) {
+				// bottom right corner
+				output[index].innerHTML = Math.round(Number(array[40].innerHTML)*Number(kernel[0].innerHTML) + Number(array[41].innerHTML)*Number(kernel[1].innerHTML) + Number(array[47].innerHTML)*Number(kernel[3].innerHTML) + Number(array[48].innerHTML)*Number(kernel[4].innerHTML))
+			} else if (index > 0 && index < 6) {
+				// top edge
+				output[index].innerHTML = Math.round(Number(array[index-1].innerHTML)*Number(kernel[3].innerHTML) + Number(array[index].innerHTML)*Number(kernel[4].innerHTML) + Number(array[index+1].innerHTML)*Number(kernel[5].innerHTML) + Number(array[index+6].innerHTML)*Number(kernel[6].innerHTML) + Number(array[index+7].innerHTML)*Number(kernel[7].innerHTML) + Number(array[index+8].innerHTML)*Number(kernel[8].innerHTML))
+			} else if (index > 42 && index < 48) {
+				// bottom edge
+				output[index].innerHTML = Math.round(Number(array[index-8].innerHTML)*Number(kernel[0].innerHTML) + Number(array[index-7].innerHTML)*Number(kernel[1].innerHTML) + Number(array[index-6].innerHTML)*Number(kernel[2].innerHTML) + Number(array[index-1].innerHTML)*Number(kernel[3].innerHTML) + Number(array[index].innerHTML)*Number(kernel[4].innerHTML) + Number(array[index+1].innerHTML)*Number(kernel[5].innerHTML))
+			} else if (index == 7 || index == 14 || index == 21 || index == 28 || index == 35) {
+				// left edge
+				output[index].innerHTML = Math.round(Number(array[index-7].innerHTML)*Number(kernel[1].innerHTML) + Number(array[index-6].innerHTML)*Number(kernel[2].innerHTML) + Number(array[index].innerHTML)*Number(kernel[4].innerHTML) + Number(array[index+1].innerHTML)*Number(kernel[5].innerHTML) + Number(array[index+7].innerHTML)*Number(kernel[7].innerHTML) + Number(array[index+8].innerHTML)*Number(kernel[8].innerHTML))
+			} else if (index == 13 || index == 20 || index == 27 || index == 34 || index == 41) {
+				// right edge
+				output[index].innerHTML = Math.round(Number(array[index-8].innerHTML)*Number(kernel[0].innerHTML) + Number(array[index-7].innerHTML)*Number(kernel[1].innerHTML) + Number(array[index-1].innerHTML)*Number(kernel[3].innerHTML) + Number(array[index].innerHTML)*Number(kernel[4].innerHTML) + Number(array[index+6].innerHTML)*Number(kernel[6].innerHTML) + Number(array[index+7].innerHTML)*Number(kernel[7].innerHTML))
+			} else {
+				// any other value
+				output[index].innerHTML = Math.round(Number(array[index-8].innerHTML)*Number(kernel[0].innerHTML) + Number(array[index-7].innerHTML)*Number(kernel[1].innerHTML) + Number(array[index-6].innerHTML)*Number(kernel[2].innerHTML) + Number(array[index-1].innerHTML)*Number(kernel[3].innerHTML) + Number(array[index].innerHTML)*Number(kernel[4].innerHTML) + Number(array[index+1].innerHTML)*Number(kernel[5].innerHTML) + Number(array[index+6].innerHTML)*Number(kernel[6].innerHTML) + Number(array[index+7].innerHTML)*Number(kernel[7].innerHTML) + Number(array[index+8].innerHTML)*Number(kernel[8].innerHTML))
+			}
+			
+			// color background of input cell based value
+			var thergb = "rgb(" + element.innerHTML + "," + element.innerHTML + "," + element.innerHTML + ")"; 
+			element.style.background=thergb;
+			// conditionally convert some text to white on dark backgrounds
+			if (Number(element.innerHTML)<128){
+				element.style.color="#FFFFFF";
+			} else {
+				element.style.color="#000000";
+			}
+			
+			// color background of output cell based value
+			var thergb = "rgb(" + output[index].innerHTML + "," + output[index].innerHTML + "," + output[index].innerHTML + ")"; 
+			output[index].style.background=thergb;
+			// conditionally convert some text to white on dark backgrounds
+			if (Number(output[index].innerHTML)<128){
+				output[index].style.color="#FFFFFF";
+			} else {
+				output[index].style.color="#000000";
+			}
+		}
+	)
+}
+</script>
+
+</body>
+</html>
