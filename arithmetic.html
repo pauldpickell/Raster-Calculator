@@ -69,6 +69,9 @@
 	<div class="grid-item-raster-input">0</div>
 </div>
 
+<br>
+<p><button onclick="location.reload();">New raster</button></p>
+
 <h3>Raster Output</h3>
 <div class="grid-container-raster-output">
 	<div class="grid-item-raster-output">0</div>
@@ -123,7 +126,7 @@
 </div>
 
 <br>
-<a href="index.html">Back</a>
+<div class="button-center"><a href="index.html" class="button">Back</a></div>
 
 <script>
 Array.from(document.getElementsByClassName("grid-item-raster-input")).forEach(
@@ -167,6 +170,7 @@ function addto() {
 			}
 		}
 	)
+	document.getElementById("error").innerHTML = "";
 }
 
 // subtract from
@@ -186,6 +190,7 @@ function subtractfrom() {
 			}
 		}
 	)
+	document.getElementById("error").innerHTML = "";
 }
 
 // divide by
@@ -228,6 +233,7 @@ function multiplyby() {
 			}
 		}
 	)
+	document.getElementById("error").innerHTML = "";
 }
 
 </script>
