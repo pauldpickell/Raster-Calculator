@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="styles.css">
+<body>
+
+<h1>Zonal Statistics</h1>
+
+<table class="center">
+	<tr>
+		<th></th>
+		<th>Zone 1 (white)</th>
+		<th>Zone 2 (grey)</th>
+		<th>Zone 3 (black)</th>
+	</tr>
+	<tr>
+		<td><b>Mean:</b></td>
+		<td><div id="mean-z1"></div></td>
+		<td><div id="mean-z2"></div></td>
+		<td><div id="mean-z3"></div></td>
+	</tr>
+	<tr>
+		<td><b>Standard Deviation:</b></td>
+		<td><div id="stdev-z1"></div></td>
+		<td><div id="stdev-z2"></div></td>
+		<td><div id="stdev-z3"></div></td>
+	</tr>
+	<tr>
+		<td><b>Min:</b></td>
+		<td><div id="min-z1"></div></td>
+		<td><div id="min-z2"></div></td>
+		<td><div id="min-z3"></div></td>
+	</tr>
+	<tr>
+		<td><b>25th Percentile:</b></td>
+		<td><div id="25pctile-z1"></div></td>
+		<td><div id="25pctile-z2"></div></td>
+		<td><div id="25pctile-z3"></div></td>
+	</tr>
+	<tr>
+		<td><b>Median:</b></td>
+		<td><div id="median-z1"></div></td>
+		<td><div id="median-z2"></div></td>
+		<td><div id="median-z3"></div></td>
+	</tr>
+	<tr>
+		<td><b>75th Percentile:</b></td>
+		<td><div id="75pctile-z1"></div></td>
+		<td><div id="75pctile-z2"></div></td>
+		<td><div id="75pctile-z3"></div></td>
+	</tr>
+	<tr>
+		<td><b>Max:</b></td>
+		<td><div id="max-z1"></div></td>
+		<td><div id="max-z2"></div></td>
+		<td><div id="max-z3"></div></td>
+	</tr>
+<table>	
+<br>
+<div class="button-center"><button onClick="randomize();">Random</button></div>
+<div class="button-center"><button onClick="structurize();">Structured</button></div>
+
+<h3>Raster Input</h3>
+<div class="grid-container-raster-input">
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+	<div class="grid-item-raster-input">0</div>
+</div>
+
+<h3>Zonal Raster</h3>
+<div class="grid-container-raster-output">
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+</div>
+
+
+<br>
+<div class="button-center"><a href="index.html" class="button">Back</a></div>
+
+<script>
+
+// create zones
+var output = Array.from(document.getElementsByClassName("grid-item-raster-output"));
+	output.forEach(
+	function(element, index, array) { 		
+		if (index < 14) {
+			element.innerHTML = Number(1);
+			element.style.background = "rgb(255,255,255)"
+		} else if (index > 13 && index < 35) {
+			element.innerHTML = Number(2);
+			element.style.background = "rgb(128,128,128)"
+		} else {
+			element.innerHTML = Number(3);
+			element.style.background = "rgb(0,0,0)";
+			element.style.color="#FFFFFF";
+		}
+	}
+)
+
+var zoneRaster = [];
+for (var i = 0; i < output.length; i++) {
+   zoneRaster.push(Number(output[i].innerHTML));
+}
+
+// structurize
+function structurize(){
+	var input = Array.from(document.getElementsByClassName("grid-item-raster-input"));
+	input.forEach(
+		function(element, index, array) { 		
+			if (index == 7 || index == 9|| index == 10|| index == 11|| index == 12|| index == 13) {
+				element.innerHTML = Number(128);
+			} else if (index == 1|| index == 8|| index == 15|| index == 22|| index == 29|| index == 36|| index == 39|| index == 40|| index == 43|| index == 46|| index == 47) {
+				element.innerHTML = Number(0);
+			} else {
+				element.innerHTML = Number(255);
+			}
+			// color background of output cell based value
+			var thergb = "rgb(" + element.innerHTML + "," + element.innerHTML + "," + element.innerHTML + ")"; 
+			element.style.background=thergb;
+			// conditionally convert some text to white on dark backgrounds
+			if (Number(element.innerHTML)<128){
+				element.style.color="#FFFFFF";
+			} else {
+				element.style.color="#000000";
+			}
+		}
+	)
+
+	var arrayNumbers = [];
+	for (var i = 0; i < input.length; i++) {
+	   arrayNumbers.push(Number(input[i].innerHTML));
+	}
+	
+	// get zone values
+	for (var z = 1; z < 4; z++) {
+		var zoneVals = getZoneValues(zoneRaster,z,arrayNumbers);
+		// mean
+		var x = document.getElementById("mean-z" + z);
+		x.innerHTML = Math.round((mean(zoneVals) + Number.EPSILON) * 100) / 100;
+		// standard deviation
+		var x = document.getElementById("stdev-z" + z);
+		x.innerHTML = Math.round((StandardDeviation(zoneVals) + Number.EPSILON) * 100) / 100;
+		// min
+		var x = document.getElementById("min-z" + z);
+		x.innerHTML = min(zoneVals);
+		// max
+		var x = document.getElementById("max-z" + z);
+		x.innerHTML = max(zoneVals);
+		// median
+		var x = document.getElementById("median-z" + z);
+		x.innerHTML = median(zoneVals);
+		// 25th percentile
+		var x = document.getElementById("25pctile-z" + z);
+		x.innerHTML = getPercentile(zoneVals, 25)
+		// 75th percentile
+		var x = document.getElementById("75pctile-z" + z);
+		x.innerHTML = getPercentile(zoneVals, 75)
+	}
+}
+
+// randomize
+function randomize(){
+	var input = Array.from(document.getElementsByClassName("grid-item-raster-input"));
+	input.forEach(
+		function(element, index, array) { 
+			// randomly assign value to cell
+			element.innerHTML = Math.floor(Math.random()*256);
+			// color background of output cell based value
+			var thergb = "rgb(" + element.innerHTML + "," + element.innerHTML + "," + element.innerHTML + ")"; 
+			element.style.background=thergb;
+			// conditionally convert some text to white on dark backgrounds
+			if (Number(element.innerHTML)<128){
+				element.style.color="#FFFFFF";
+			} else {
+				element.style.color="#000000";
+			}
+
+		}
+	)
+
+	var arrayNumbers = [];
+	for (var i = 0; i < input.length; i++) {
+	   arrayNumbers.push(Number(input[i].innerHTML));
+	}
+	
+	// get zone values
+	for (var z = 1; z < 4; z++) {
+		var zoneVals = getZoneValues(zoneRaster,z,arrayNumbers);
+		// mean
+		var x = document.getElementById("mean-z" + z);
+		x.innerHTML = Math.round((mean(zoneVals) + Number.EPSILON) * 100) / 100;
+		// standard deviation
+		var x = document.getElementById("stdev-z" + z);
+		x.innerHTML = Math.round((StandardDeviation(zoneVals) + Number.EPSILON) * 100) / 100;
+		// min
+		var x = document.getElementById("min-z" + z);
+		x.innerHTML = min(zoneVals);
+		// max
+		var x = document.getElementById("max-z" + z);
+		x.innerHTML = max(zoneVals);
+		// median
+		var x = document.getElementById("median-z" + z);
+		x.innerHTML = median(zoneVals);
+		// 25th percentile
+		var x = document.getElementById("25pctile-z" + z);
+		x.innerHTML = getPercentile(zoneVals, 25)
+		// 75th percentile
+		var x = document.getElementById("75pctile-z" + z);
+		x.innerHTML = getPercentile(zoneVals, 75)
+	}
+}
+
+// mean
+function mean(numbers) {
+    var total = 0, i;
+    for (i = 0; i < numbers.length; i += 1) {
+        total += numbers[i];
+    }
+    return total / numbers.length;
+}
+
+// median
+function median(numbers) {
+    var median = 0, numsLen = numbers.length;
+    numbers.sort((a, b) => a - b);
+ 
+    if (
+        numsLen % 2 === 0 // is even
+    ) {
+        // average of two middle numbers
+        median = (numbers[numsLen / 2 - 1] + numbers[numsLen / 2]) / 2;
+    } else { // is odd
+        // middle number only
+        median = numbers[(numsLen - 1) / 2];
+    }
+ 
+    return median;
+}
+
+// min
+function min(numbers) {
+    numbers.sort((a, b) => a - b);
+    return numbers[0];
+}
+
+// max
+function max(numbers) {
+    numbers.sort((a, b) => a - b);
+    return numbers[numbers.length - 1];
+}
+
+// standard deviation
+function StandardDeviation(array) {
+  const n = array.length
+  const mean = array.reduce((a, b) => a + b) / n
+  return Math.sqrt(array.map(x => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / n)
+}
+
+// percentiles
+function getPercentile(data, percentile) {
+    data.sort((a, b) => a - b); 
+    var index = (percentile/100) * data.length;
+    var result;
+    if (Math.floor(index) == index) {
+         result = (data[(index-1)] + data[index])/2;
+    }
+    else {
+        result = data[Math.floor(index)];
+    }
+    return result;
+}
+
+// get zone values from raster-input
+function getZoneValues(zoneRaster, zone, inputRaster) {
+	var indices = [], i;
+	for(i = 0; i < zoneRaster.length; i++)
+		if (zoneRaster[i] === zone)
+			indices.push(i);
+	var zoneValues = [], j;
+	for(j = 0; j < indices.length; j++)
+		zoneValues.push(inputRaster[indices[j]]);
+	return zoneValues;
+}
+</script>
+
+</body>
+</html>
+
