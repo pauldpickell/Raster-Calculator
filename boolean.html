@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="styles.css">
+<body>
+
+<h1>Boolean</h1>
+
+<h3>Expression</h3>
+
+<p>Raster 1 
+<select name="sign1" id="sign1">
+	<option value=">">></option>
+	<option value=">=">=></option>
+	<option value="<">&lt;</option>
+	<option value="<=">&lt;=</option>
+	<option value="===">=</option>
+	<option value="!==">&lt;></option>
+</select>
+<input type="text" id="inputval1" value="5">
+<select name="boolean" id="boolean">
+	<option value="&&">AND</option>
+	<option value="||">OR</option>
+</select>
+Raster 2 
+<select name="sign2" id="sign2">
+	<option value=">">></option>
+	<option value=">=">=></option>
+	<option value="<"><</option>
+	<option value="<="><=</option>
+	<option value="===">=</option>
+	<option value="!=="><></option>
+</select>
+<input type="text" id="inputval2" value="5">
+</p>
+<p>
+	<button onclick="evaluateNow();">Evaluate</button>
+</p>
+	
+<h3>Raster 1</h3>
+<div class="grid-container-raster-input1">
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+	<div class="grid-item-raster-input1">0</div>
+</div>
+
+<h3>Raster 2</h3>
+<div class="grid-container-raster-input2">
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+	<div class="grid-item-raster-input2">0</div>
+</div>
+
+<br>
+<p><button onclick="location.reload();">New rasters</button></p>
+
+<h3>Raster Output</h3>
+<div class="grid-container-raster-output">
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+	<div class="grid-item-raster-output">0</div>
+</div>
+
+<br>
+<div class="button-center"><a href="index.html" class="button">Back</a></div>
+
+<script>
+Array.from(document.getElementsByClassName("grid-item-raster-input1")).forEach(
+	function(element, index, array) { 
+		// randomly assign value to cell
+		element.innerHTML = Math.floor(Math.random()*256);
+	}
+)
+
+Array.from(document.getElementsByClassName("grid-item-raster-input2")).forEach(
+	function(element, index, array) { 
+		// randomly assign value to cell
+		element.innerHTML = Math.floor(Math.random()*256);
+	}
+)
+
+var output = Array.from(document.getElementsByClassName("grid-item-raster-output"));
+
+// colorize the random input raster
+var input1 = Array.from(document.getElementsByClassName("grid-item-raster-input1"))
+input1.forEach(
+	function(element, index, array) { 		
+		// color background of input cell based value
+		var thergb = "rgb(" + element.innerHTML + "," + element.innerHTML + "," + element.innerHTML + ")"; 
+		element.style.background=thergb;
+		// conditionally convert some text to white on dark backgrounds
+		if (Number(element.innerHTML)<128){
+			element.style.color="#FFFFFF";
+		}
+	}
+)
+
+var input1Numbers = [];
+for (var i = 0; i < input1.length; i++) {
+	input1Numbers.push(Number(input1[i].innerHTML));
+}
+
+var input2 = Array.from(document.getElementsByClassName("grid-item-raster-input2"));
+input2.forEach(
+	function(element, index, array) { 		
+		// color background of input cell based value
+		var thergb = "rgb(" + element.innerHTML + "," + element.innerHTML + "," + element.innerHTML + ")"; 
+		element.style.background=thergb;
+		// conditionally convert some text to white on dark backgrounds
+		if (Number(element.innerHTML)<128){
+			element.style.color="#FFFFFF";
+		}
+	}
+)
+
+var input2Numbers = [];
+for (var i = 0; i < input2.length; i++) {
+	input2Numbers.push(Number(input2[i].innerHTML));
+}
+
+// evaluate
+function evaluateNow() {
+	var inputval1 = document.getElementById("inputval1").value;
+	var inputval2 = document.getElementById("inputval2").value;
+	var sign1 = document.getElementById("sign1").value;
+	var sign2 = document.getElementById("sign2").value;
+	var bool = document.getElementById("boolean").value;
+	//console.log("Raster1 "+sign1+" "+inputval1+" "+bool+" Raster2 "+sign2+" "+inputval2);
+	output.forEach(
+		function(element, index, array) {
+			if (eval("input1Numbers[index] "+sign1+" "+inputval1+" "+bool+" input2Numbers[index] "+sign2+" "+inputval2)){
+				element.innerHTML = Number(1);
+				element.style.background = "rgb(0,0,0)";
+				element.style.color="#FFFFFF";
+			} else {
+				element.innerHTML = Number(0);
+				element.style.background = "rgb(255,255,255)";
+				element.style.color="#000000";
+			}
+		}
+	)
+}
+</script>
+
+</body>
+</html>
+
